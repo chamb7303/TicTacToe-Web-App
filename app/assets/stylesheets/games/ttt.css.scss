@@ -1,0 +1,13 @@
+#ttt-container {
+  $ttt-cell-size: 50px;
+
+  div.cell {
+    display: inline-block;
+    font-size: $ttt-cell-size;
+    height: $ttt-cell-size;
+    width: $ttt-cell-size;
+    background-color: blue;
+    margin: 2px 0px;
+    text-align: center;
+  }
+}

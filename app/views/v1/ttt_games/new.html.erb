@@ -1,0 +1,24 @@
+<h1 id='ttt-ticker'>Welcome to Tic-Tac-Toe</h1>
+
+<div id='ttt-container'>
+  <div id='ttt-board'>
+    <% 0.upto(2) do |row_num| %>
+      <div class='row' id=<%= "row#{row_num}" %>>
+          <% 0.upto(2) do |col_num| %>
+            <div class='cell' data-row=<%= row_num %> data-col=<%= col_num %>></div>
+          <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <br>
+
+  <form id='ttt-new-game-form' action=<%= v1_ttt_games_url %>>
+    <label for='primary-player'>Player_1_name</label><br>
+    <input id='primary-player' type='text' name='primary_player[id]'><br>
+    <label for='secondary-player'>Player_2_name</label><br>
+    <input id='secondary-player' type='text' name='secondary_player[id]'><br>
+    <br>
+    <input id='ttt-new-game-btn' type='submit' value='Start New Game'>
+  </form>
+</div>
